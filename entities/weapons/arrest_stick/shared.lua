@@ -85,12 +85,21 @@ function SWEP:PrimaryAttack()
         return
     end
 
-    ent:arrest(nil, self:GetOwner())
-    DarkRP.notify(ent, 0, 20, DarkRP.getPhrase("youre_arrested_by", self:GetOwner():Nick()))
+	if math.random(1, 4) == 4 then
+		self:GetOwner():arrest(nil, self:GetOwner())
+		DarkRP.notify(self:GetOwner(), 0, 20, DarkRP.getPhrase("youre_arrested_by", self:GetOwner():Nick()))
 
-    if self:GetOwner().SteamName then
-        DarkRP.log(self:GetOwner():Nick() .. " (" .. self:GetOwner():SteamID() .. ") arrested " .. ent:Nick(), Color(0, 255, 255))
-    end
+		if self:GetOwner().SteamName then
+			DarkRP.log(self:GetOwner():Nick() .. " (" .. self:GetOwner():SteamID() .. ") arrested " .. self:GetOwner():Nick(), Color(0, 255, 255))
+		end
+	else
+		ent:arrest(nil, self:GetOwner())
+		DarkRP.notify(ent, 0, 20, DarkRP.getPhrase("youre_arrested_by", self:GetOwner():Nick()))
+
+		if self:GetOwner().SteamName then
+			DarkRP.log(self:GetOwner():Nick() .. " (" .. self:GetOwner():SteamID() .. ") arrested " .. ent:Nick(), Color(0, 255, 255))
+		end
+	end
 end
 
 function SWEP:startDarkRPCommand(usrcmd)
