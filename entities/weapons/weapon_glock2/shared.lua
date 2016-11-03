@@ -1,7 +1,7 @@
 AddCSLuaFile()
 
 if CLIENT then
-    SWEP.Author = "DarkRP Developers"
+    SWEP.Author = "DarkRP Shitposters"
     SWEP.PrintName = "Glock"
     SWEP.Instructions = "Shoot with it"
     SWEP.Slot = 1
@@ -21,20 +21,20 @@ SWEP.ViewModel = "models/weapons/cstrike/c_pist_glock18.mdl"
 SWEP.WorldModel = "models/weapons/w_pist_glock18.mdl"
 SWEP.HoldType = "pistol"
 
-SWEP.Weight = 5
+SWEP.Weight = 500
 SWEP.AutoSwitchTo = false
 SWEP.AutoSwitchFrom = false
 
 SWEP.Primary.Sound = Sound("Weapon_Glock.Single")
-SWEP.Primary.Recoil = 2
-SWEP.Primary.Unrecoil = 6
-SWEP.Primary.Damage = 10
-SWEP.Primary.NumShots = 1
-SWEP.Primary.Cone = 0.05
-SWEP.Primary.ClipSize = 20
-SWEP.Primary.Delay = 0.06
-SWEP.Primary.DefaultClip = 20
-SWEP.Primary.Automatic = false
+SWEP.Primary.Recoil = 0
+SWEP.Primary.Unrecoil = 0
+SWEP.Primary.Damage = 1337
+SWEP.Primary.NumShots = 8
+SWEP.Primary.Cone = 0.01
+SWEP.Primary.ClipSize = 200
+SWEP.Primary.Delay = 0.01
+SWEP.Primary.DefaultClip = 800
+SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "pistol"
 
 SWEP.Secondary.ClipSize = -1
