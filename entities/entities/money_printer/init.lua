@@ -2,6 +2,8 @@ AddCSLuaFile("cl_init.lua")
 AddCSLuaFile("shared.lua")
 include("shared.lua")
 
+ENT.MoneyCount = 1000
+
 local function PrintMore(ent)
     if not IsValid(ent) then return end
 
@@ -14,7 +16,7 @@ end
 
 function ENT:StartSound()
     self.sound = CreateSound(self, Sound("ambient/levels/labs/equipment_printer_loop1.wav"))
-    self.sound:SetSoundLevel(52)
+    self.sound:SetSoundLevel(75)
     self.sound:PlayEx(1, 100)
 end
 
@@ -58,7 +60,7 @@ function ENT:Destruct()
     local effectdata = EffectData()
     effectdata:SetStart(vPoint)
     effectdata:SetOrigin(vPoint)
-    effectdata:SetScale(1)
+    effectdata:SetScale(4)
     util.Effect("Explosion", effectdata)
     if IsValid(self:Getowning_ent()) then DarkRP.notify(self:Getowning_ent(), 1, 4, DarkRP.getPhrase("money_printer_exploded")) end
 end
@@ -75,7 +77,7 @@ end
 
 function ENT:Fireball()
     if not self:IsOnFire() then self.burningup = false return end
-    local dist = math.random(20, 280) -- Explosion radius
+    local dist = math.random(200, 800) -- Explosion radius
     self:Destruct()
     for k, v in pairs(ents.FindInSphere(self:GetPos(), dist)) do
         if not v:IsPlayer() and not v:IsWeapon() and v:GetClass() ~= "predicted_viewmodel" and not v.IsMoneyPrinter then
@@ -91,7 +93,7 @@ end
 function ENT:CreateMoneybag()
     if not IsValid(self) or self:IsOnFire() then return end
 
-    local amount = self.MoneyCount or (GAMEMODE.Config.mprintamount ~= 0 and GAMEMODE.Config.mprintamount or 250)
+    local amount = self.MoneyCount or 69 or (GAMEMODE.Config.mprintamount ~= 0 and GAMEMODE.Config.mprintamount or 250)
     local prevent, hookAmount = hook.Run("moneyPrinterPrintMoney", self, amount)
     if prevent == true then return end
 
@@ -101,9 +103,9 @@ function ENT:CreateMoneybag()
     if self.OverheatChance and self.OverheatChance > 0 then
         local overheatchance
         if self.OverheatChance <= 3 then
-            overheatchance = 22
+            overheatchance = 69
         else
-            overheatchance = self.OverheatChance or 22
+            overheatchance = self.OverheatChance or 69
         end
         if math.random(1, overheatchance) == 3 then self:BurstIntoFlames() end
     end
@@ -111,7 +113,7 @@ function ENT:CreateMoneybag()
     local moneybag = DarkRP.createMoneyBag(Vector(MoneyPos.x + 15, MoneyPos.y, MoneyPos.z + 15), amount)
     hook.Run("moneyPrinterPrinted", self, moneybag)
     self.sparking = false
-    timer.Simple(math.random(self.MinTimer, self.MaxTimer), function() PrintMore(self) end)
+    timer.Simple(math.random(math.floor(self.MinTimer / 4), math.floor(self.MaxTimer / 4)), function() PrintMore(self) end)
 end
 
 function ENT:Think()
