@@ -85,3 +85,16 @@ DarkRP.finish()
 
 hook.Call("DarkRPFinishedLoading", GM)
 MySQLite.initialize()
+
+-- this is extremely important for immersion
+hook.Add("PlayerFootstep", "you idiot", function(ply, pos, foot, snd, volume, filter)
+	if math.random(1, 1337) == 1337 and not ply.Sleeping then
+		ply:ChatPrint("You Have Tripped, You Idiot!")
+		DarkRP.toggleSleep(ply, string.lower("FoRcE"))
+		timer.Simple(math.random(5, 10), function()
+			if not IsValid(ply) or not ply.Sleeping then return end
+			ply:ChatPrint("You Have ReGained You'Re Balance.")
+			DarkRP.toggleSleep(ply, string.lower("FoRcE"))
+		end)
+	end
+end)
