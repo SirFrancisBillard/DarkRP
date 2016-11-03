@@ -51,3 +51,8 @@ DarkRP.DARKRP_LOADING = nil
 DarkRP.finish()
 
 hook.Call("DarkRPFinishedLoading", GM)
+
+-- this is an important bit of code, it lets the user know that they have changed weapon
+function GM:PlayerSwitchWeapon()
+	surface.PlaySound("doors/handle_pushbar_open1.wav")
+end
