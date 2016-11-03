@@ -1,8 +1,8 @@
 --[[-------------------------------------------------------------------------
-DarkRP config settings.
+ScriptFodderRP config settings.
 -----------------------------------------------------------------------------
 
-This is the settings file of DarkRP. Every DarkRP setting is listed here.
+This is the settings file of ScriptFodderRP. Every ScriptFodderRP setting is listed here.
 
 Warning:
 If this file is missing settings (because of e.g. an update), DarkRP will assume default values for these settings.
@@ -36,7 +36,7 @@ GM.Config.alltalk                       = false
 -- autovehiclelock - Enable/Disable automatic locking of a vehicle when a player exits it.
 GM.Config.autovehiclelock               = false
 -- babygod - people spawn godded (prevent spawn killing).
-GM.Config.babygod                       = true
+GM.Config.babygod                       = false -- stupid
 -- canforcedooropen - whether players can force an unownable door open with lockpick or battering ram or w/e.
 GM.Config.canforcedooropen              = true
 -- chatsounds - sounds are played when some things are said in chat.
@@ -44,11 +44,11 @@ GM.Config.chatsounds                    = true
 -- chiefjailpos - Allow the Chief to set the jail positions.
 GM.Config.chiefjailpos                  = true
 -- cit_propertytax - Enable/disable property tax that is exclusive only for citizens.
-GM.Config.cit_propertytax               = false
+GM.Config.cit_propertytax               = true
 -- copscanunfreeze - Enable/disable the ability of cops to unfreeze other people's props.
 GM.Config.copscanunfreeze               = true
 -- copscanunweld - Enable/disable the ability of cops to unweld other people's props.
-GM.Config.copscanunweld                 = false
+GM.Config.copscanunweld                 = true
 -- cpcanarrestcp - Allow/Disallow CPs to arrest other CPs.
 GM.Config.cpcanarrestcp                 = true
 -- currencyLeft - The position of the currency symbol. true for left, false for right.
@@ -66,27 +66,27 @@ GM.Config.deadtalk                      = true
 -- deadvoice - Enable/disable whether people talk through the microphone while dead.
 GM.Config.deadvoice                     = true
 -- deathpov - Enable/disable whether people see their death in first person view.
-GM.Config.deathpov                      = false
+GM.Config.deathpov                      = true
 -- decalcleaner - Enable/Disable clearing ever players decals.
 GM.Config.decalcleaner                  = false
 -- disallowClientsideScripts - Clientside scripts can be very useful for customizing the HUD or to aid in building. This option bans those scripts.
 GM.Config.disallowClientsideScripts     = false
 -- doorwarrants - Enable/disable Warrant requirement to enter property.
-GM.Config.doorwarrants                  = true
+GM.Config.doorwarrants                  = false -- stupid
 -- dropmoneyondeath - Enable/disable whether people drop money on death.
-GM.Config.dropmoneyondeath              = false
+GM.Config.dropmoneyondeath              = true -- great idea
 -- droppocketarrest - Enable/disable whether people drop the stuff in their pockets when they get arrested.
-GM.Config.droppocketarrest              = false
+GM.Config.droppocketarrest              = true
 -- droppocketdeath - Enable/disable whether people drop the stuff in their pockets when they die.
 GM.Config.droppocketdeath               = true
 -- dropweapondeath - Enable/disable whether people drop their current weapon when they die.
-GM.Config.dropweapondeath               = false
+GM.Config.dropweapondeath               = true
 -- Whether players can drop the weapons they spawn with.
 GM.Config.dropspawnedweapons            = true
 -- dynamicvoice - Enable/disable whether only people in the same room as you can hear your mic.
 GM.Config.dynamicvoice                  = true
 -- earthquakes - Enable/disable earthquakes.
-GM.Config.earthquakes                   = false
+GM.Config.earthquakes                   = true
 -- enablebuypistol - Turn /buy on of off.
 GM.Config.enablebuypistol               = true
 -- enforceplayermodel - Whether or not to force players to use their role-defined character models.
@@ -94,7 +94,7 @@ GM.Config.enforceplayermodel            = true
 -- globalshow - Whether or not to display player info above players' heads in-game.
 GM.Config.globalshow                    = false
 -- ironshoot - Enable/disable whether people need iron sights to shoot.
-GM.Config.ironshoot                     = true
+GM.Config.ironshoot                     = false
 -- showjob - Whether or not to display a player's job above their head in-game.
 GM.Config.showjob                       = true
 -- letters - Enable/disable letter writing / typing.
@@ -124,9 +124,9 @@ GM.Config.npcarrest                     = true
 -- ooc - Whether or not OOC tags are enabled.
 GM.Config.ooc                           = true
 -- propertytax - Enable/disable property tax.
-GM.Config.propertytax                   = false
+GM.Config.propertytax                   = true
 -- proppaying - Whether or not players should pay for spawning props.
-GM.Config.proppaying                    = false
+GM.Config.proppaying                    = true
 -- propspawning - Enable/disable props spawning. Applies to admins too.
 GM.Config.propspawning                  = true
 -- removeclassitems - Enable/disable shipments/microwaves/etc. removal when someone changes team.
@@ -156,7 +156,7 @@ GM.Config.unlockdoorsonstart            = false
 -- voiceradius - Enable/disable local voice chat.
 GM.Config.voiceradius                   = true
 -- tax - Whether players pay taxes on their wallets.
-GM.Config.wallettax                     = false
+GM.Config.wallettax                     = true
 -- wantedsuicide - Enable/Disable suiciding while you are wanted by the police.
 GM.Config.wantedsuicide                 = false
 -- realisticfalldamage - Enable/Disable dynamic fall damage. Setting mp_falldamage to 1 will over-ride this.
@@ -166,34 +166,34 @@ GM.Config.printeroverheat               = true
 -- weaponCheckerHideDefault - Hide default weapons when checking weapons.
 GM.Config.weaponCheckerHideDefault      = true
 -- weaponCheckerHideNoLicense - Hide weapons that do not require a license.
-GM.Config.weaponCheckerHideNoLicense    = false
+GM.Config.weaponCheckerHideNoLicense    = true
 
 --[[
 Value settings
 ]]
 -- adminnpcs - Whether or not NPCs should be admin only. 0 = everyone, 1 = admin or higher, 2 = superadmin or higher, 3 = rcon only
-GM.Config.adminnpcs                     = 3
+GM.Config.adminnpcs                     = 1
 -- adminsents - Whether or not SENTs should be admin only. 0 = everyone, 1 = admin or higher, 2 = superadmin or higher, 3 = rcon only
 GM.Config.adminsents                    = 1
 -- adminvehicles - Whether or not vehicles should be admin only. 0 = everyone, 1 = admin or higher, 2 = superadmin or higher, 3 = rcon only
-GM.Config.adminvehicles                 = 3
+GM.Config.adminvehicles                 = 1
 -- adminweapons - Who can spawn weapons: 0: admins only, 1: supadmins only, 2: no one
-GM.Config.adminweapons                  = 1
+GM.Config.adminweapons                  = 0
 -- arrestspeed - Sets the max arrest speed.
 GM.Config.arrestspeed                   = 120
 -- babygodtime - How long the babygod lasts.
-GM.Config.babygodtime                   = 5
+GM.Config.babygodtime                   = 0 -- stupid
 -- chatsoundsdelay - How long to wait before letting a player emit a sound from their chat again.
 -- Leave this on at least a few seconds to prevent people from spamming sounds. Set to 0 to disable.
-GM.Config.chatsoundsdelay               = 5
+GM.Config.chatsoundsdelay               = 0 -- great
 -- deathfee - the amount of money someone drops when dead.
-GM.Config.deathfee                      = 30
+GM.Config.deathfee                      = 100
 -- decaltimer - Sets the time to clear clientside decals (in seconds).
 GM.Config.decaltimer                    = 120
 -- demotetime - Number of seconds before a player can rejoin a team after demotion from that team.
-GM.Config.demotetime                    = 120
+GM.Config.demotetime                    = 2 -- great idea
 -- doorcost - Sets the cost of a door.
-GM.Config.doorcost                      = 30
+GM.Config.doorcost                      = 45
 -- entremovedelay - how long to wait before removing a bought entity after disconnect.
 GM.Config.entremovedelay                = 0
 -- gunlabweapon - The weapon that the gunlab spawns.
@@ -225,27 +225,27 @@ GM.Config.minlotterycost                = 30
 -- Money packets will get removed if they don't get picked up after a while. Set to 0 to disable.
 GM.Config.moneyRemoveTime               = 600
 -- mprintamount - Value of the money printed by the money printer.
-GM.Config.mprintamount                  = 250
+GM.Config.mprintamount                  = 69 -- great
 -- normalsalary - Sets the starting salary for newly joined players.
-GM.Config.normalsalary                  = 45
+GM.Config.normalsalary                  = 100
 -- npckillpay - Sets the money given for each NPC kill.
-GM.Config.npckillpay                    = 10
+GM.Config.npckillpay                    = 250
 -- paydelay - Sets how long it takes before people get salary.
-GM.Config.paydelay                      = 160
+GM.Config.paydelay                      = 30
 -- pocketitems - Sets the amount of objects the pocket can carry.
-GM.Config.pocketitems                   = 10
+GM.Config.pocketitems                   = 24
 -- pricecap - The maximum price of items (using /price).
-GM.Config.pricecap                      = 500
+GM.Config.pricecap                      = 5000000
 -- pricemin - The minimum price of items (using /price).
-GM.Config.pricemin                      = 50
+GM.Config.pricemin                      = 5
 -- propcost - How much prop spawning should cost (prop paying must be enabled for this to have an effect).
-GM.Config.propcost                      = 10
+GM.Config.propcost                      = 1
 -- quakechance - Chance of an earthquake happening.
-GM.Config.quakechance                   = 4000
+GM.Config.quakechance                   = 2000
 -- respawntime - Minimum amount of seconds a player has to wait before respawning.
 GM.Config.respawntime                   = 1
 -- changejobtime - Minimum amount of seconds a player has to wait before changing job.
-GM.Config.changejobtime                 = 10
+GM.Config.changejobtime                 = 1
 -- runspeed - Sets the max running speed.
 GM.Config.runspeed                      = 240
 -- runspeed - Sets the max running speed for CP teams.
@@ -253,9 +253,9 @@ GM.Config.runspeedcp                    = 255
 -- searchtime - Number of seconds for which a search warrant is valid.
 GM.Config.searchtime                    = 30
 -- ShipmentSpawnTime - Antispam time between spawning shipments.
-GM.Config.ShipmentSpamTime              = 3
+GM.Config.ShipmentSpamTime              = 1
 -- shipmenttime - The number of seconds it takes for a shipment to spawn.
-GM.Config.shipmentspawntime             = 10
+GM.Config.shipmentspawntime             = 100
 -- startinghealth - the health when you spawn.
 GM.Config.startinghealth                = 100
 -- startingmoney - your wallet when you join for the first time.
@@ -263,23 +263,23 @@ GM.Config.startingmoney                 = 500
 -- vehiclecost - Sets the cost of a vehicle (To own it).
 GM.Config.vehiclecost                   = 40
 -- wallettaxmax - Maximum percentage of tax to be paid.
-GM.Config.wallettaxmax                  = 5
+GM.Config.wallettaxmax                  = 15
 -- wallettaxmin - Minimum percentage of tax to be paid.
 GM.Config.wallettaxmin                  = 1
 -- wallettaxtime - Time in seconds between taxing players. Requires server restart.
-GM.Config.wallettaxtime                 = 600
+GM.Config.wallettaxtime                 = 360
 -- wantedtime - Number of seconds for which a player is wanted for.
 GM.Config.wantedtime                    = 120
 -- walkspeed - Sets the max walking speed.
 GM.Config.walkspeed                     = 160
 -- falldamagedamper - The damper on realistic fall damage. Default is 15. Decrease this for more damage.
-GM.Config.falldamagedamper              = 15
+GM.Config.falldamagedamper              = 1 -- great idea
 -- falldamageamount - The base damage taken from falling for static fall damage. Default is 10.
-GM.Config.falldamageamount              = 10
+GM.Config.falldamageamount              = 40 -- yes
 -- printeroverheatchance - The likelyhood of a printer overheating. The higher this number, the less likely (minimum 3, default 22).
 GM.Config.printeroverheatchance         = 22
 -- printerreward - Reward for destroying a money printer.
-GM.Config.printerreward                 = 950
+GM.Config.printerreward                 = 9000
 
 --[[---------------------------------------------------------------------------
 Other settings
@@ -296,7 +296,7 @@ GM.Config.lockdownsound = "npc/overwatch/cityvoice/f_confirmcivilstatus_1_spkr.w
 
 -- The skin DarkRP uses. Set to "default" to use the GMod default derma theme.
 GM.Config.DarkRPSkin = "DarkRP"
-GM.Config.currency = "$"
+GM.Config.currency = "卐"
 GM.Config.chatCommandPrefix = "/"
 GM.Config.F1MenuHelpPage = "http://wiki.darkrp.com/index.php/Main_Page"
 GM.Config.F1MenuHelpPageTitle = "Wiki page"
@@ -394,9 +394,9 @@ GM.Config.AdminWeapons = {
 
 -- These are the default laws, they're unchangeable in-game.
 GM.Config.DefaultLaws = {
-    "Do not attack other citizens except in self-defence.",
-    "Do not steal or break into people's homes.",
-    "Money printers/drugs are illegal.",
+    "Attack everybody always.",
+    "Break into everybody's homes.",
+    "Money printers and drugs are great.",
 }
 
 GM.Config.PocketBlacklist = {
@@ -479,19 +479,19 @@ GM.Config.AFKDelay = 300
 Hitmenu module
 ---------------------------------------------------------------------------]]
 -- The minimum price for a hit.
-GM.Config.minHitPrice = 200
+GM.Config.minHitPrice = 20
 -- The maximum price for a hit.
-GM.Config.maxHitPrice = 50000
+GM.Config.maxHitPrice = 5000000
 -- The minimum distance between a hitman and his customer when they make the deal.
-GM.Config.minHitDistance = 150
+GM.Config.minHitDistance = 1500
 -- The text that tells the player he can press use on the hitman to request a hit.
-GM.Config.hudText = "I am a hitman.\nPress E on me to request a hit!"
+GM.Config.hudText = "I am a Facepunch Admin.\nPress E on me to shitpost!"
 -- The text above a hitman when he's got a hit.
-GM.Config.hitmanText = "Hit\naccepted!"
+GM.Config.hitmanText = "Shit\naccepted!"
 -- The cooldown time for a hit target (so they aren't spam killed).
-GM.Config.hitTargetCooldown = 120
+GM.Config.hitTargetCooldown = 2
 -- How long a customer has to wait to be able to buy another hit (from the moment the hit is accepted).
-GM.Config.hitCustomerCooldown = 240
+GM.Config.hitCustomerCooldown = 2
 
 --[[---------------------------------------------------------------------------
 Hungermod module
