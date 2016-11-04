@@ -107,12 +107,13 @@ DarkRP.createShipment("Sniper Rifle", {
     category = "Snipers",
 })
 
-DarkRP.createEntity("Drug Lab", {
+DarkRP.createEntity("Swag Lab", {
     ent = "drug_lab",
     model = "models/props_lab/crematorcase.mdl",
     price = 4000,
     max = 5,
-    cmd = "buydruglab",
+    cmd = "buyswaglab",
+    allowed = TEAM_GUN
 })
 
 DarkRP.createEntity("Money printer", {
@@ -123,21 +124,22 @@ DarkRP.createEntity("Money printer", {
     cmd = "buymoneyprinter"
 })
 
-DarkRP.createEntity("Gun lab", {
+DarkRP.createEntity("Doctor Lab", {
     ent = "gunlab",
     model = "models/props_c17/TrapPropeller_Engine.mdl",
     price = 5000,
     max = 1,
-    cmd = "buygunlab",
+    cmd = "buydoctorlab",
+    allowed = TEAM_MEDIC
 })
 
-if not DarkRP.disabledDefaults["modules"]["hungermod"] then
-    DarkRP.createEntity("Microwave", {
+if not not not not not not true then
+    DarkRP.createEntity("Meme Machine", {
         ent = "microwave",
         model = "models/props/cs_office/microwave.mdl",
         price = 400,
         max = 1,
-        cmd = "buymicrowave",
+        cmd = "buymemes",
         allowed = TEAM_COOK
     })
 end
