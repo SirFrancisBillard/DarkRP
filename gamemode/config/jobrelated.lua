@@ -23,10 +23,11 @@ TEAM_CITIZEN = DarkRP.createJob("Citizen", {
         "models/player/Group01/Male_08.mdl",
         "models/player/Group01/Male_09.mdl"
     },
-    description = [[The Citizen is the most basic level of society you can hold besides being a hobo. You have no specific role in city life.]],
+    description = [[The Citizen is the gayest level of society you can hold besides being Bruce Jenner.
+        You have no specific role in city life.]],
     weapons = {},
     command = "citizen",
-    max = 0,
+    max = 69,
     salary = GAMEMODE.Config.normalsalary,
     admin = 0,
     vote = false,
@@ -35,30 +36,30 @@ TEAM_CITIZEN = DarkRP.createJob("Citizen", {
     category = "Citizens",
 })
 
-TEAM_POLICE = DarkRP.createJob("Civil Protection", {
+TEAM_POLICE = DarkRP.createJob("Cheese Protector", {
     color = Color(25, 25, 170, 255),
     model = {"models/player/police.mdl", "models/player/police_fem.mdl"},
-    description = [[The protector of every citizen that lives in the city.
+    description = [[The protector of all cheese that lives in the city.
         You have the power to arrest criminals and protect innocents.
         Hit a player with your arrest baton to put them in jail.
         Bash a player with a stunstick and they may learn to obey the law.
         The Battering Ram can break down the door of a criminal, with a warrant for their arrest.
         The Battering Ram can also unfreeze frozen props (if enabled).
         Type /wanted <name> to alert the public to the presence of a criminal.]],
-    weapons = {"arrest_stick", "unarrest_stick", "weapon_glock2", "stunstick", "door_ram", "weaponchecker"},
+    weapons = {"arrest_stick", "unarrest_stick", "weapon_p2282", "stunstick", "door_ram", "weaponchecker"},
     command = "cp",
-    max = 4,
+    max = 8,
     salary = GAMEMODE.Config.normalsalary * 1.45,
     admin = 0,
     vote = true,
     hasLicense = true,
     ammo = {
-        ["pistol"] = 60,
+        ["pistol"] = 400,
     },
     category = "Civil Protection",
 })
 
-TEAM_GANG = DarkRP.createJob("Gangster", {
+TEAM_GANG = DarkRP.createJob("Memester", {
     color = Color(75, 75, 75, 255),
     model = {
         "models/player/Group03/Female_01.mdl",
@@ -75,26 +76,26 @@ TEAM_GANG = DarkRP.createJob("Gangster", {
         "models/player/Group03/Male_07.mdl",
         "models/player/Group03/Male_08.mdl",
         "models/player/Group03/Male_09.mdl"},
-    description = [[The lowest person of crime.
-        A gangster generally works for the Mobboss who runs the crime family.
-        The Mob boss sets your agenda and you follow it or you might be punished.]],
+    description = [[The lowest person of meme.
+        A gangster generally works for the Meme Boss who runs the meme family.
+        The Meme Boss sets your agenda and you follow it or you might be punished.]],
     weapons = {},
     command = "gangster",
-    max = 3,
+    max = 8,
     salary = GAMEMODE.Config.normalsalary,
     admin = 0,
     vote = false,
     hasLicense = false,
-    category = "Gangsters",
+    category = "Memesters",
 })
 
-TEAM_MOB = DarkRP.createJob("Mob boss", {
+TEAM_MOB = DarkRP.createJob("Meme Boss", {
     color = Color(25, 25, 25, 255),
     model = "models/player/gman_high.mdl",
-    description = [[The Mob boss is the boss of the criminals in the city.
+    description = [[The Meme Boss is the boss of the memesters in the city.
         With his power he coordinates the gangsters and forms an efficient crime organization.
         He has the ability to break into houses by using a lockpick.
-        The Mob boss posesses the ability to unarrest you.]],
+        The Meme Boss posesses the ability to unarrest you.]],
     weapons = {"lockpick", "unarrest_stick"},
     command = "mobboss",
     max = 1,
@@ -102,16 +103,16 @@ TEAM_MOB = DarkRP.createJob("Mob boss", {
     admin = 0,
     vote = false,
     hasLicense = false,
-    category = "Gangsters",
+    category = "Memesters",
 })
 
-TEAM_GUN = DarkRP.createJob("Gun Dealer", {
+TEAM_GUN = DarkRP.createJob("Swag Dealer", {
     color = Color(255, 140, 0, 255),
     model = "models/player/monk.mdl",
-    description = [[A Gun Dealer is the only person who can sell guns to other people.
-        Make sure you aren't caught selling illegal firearms to the public! You might get arrested!]],
+    description = [[A Swag Dealer is the only person who can sell swag to other people.
+        Make sure you aren't caught selling illegal swag to the public! You might get arrested!]],
     weapons = {},
-    command = "gundealer",
+    command = "swagdealer",
     max = 2,
     salary = GAMEMODE.Config.normalsalary,
     admin = 0,
@@ -129,7 +130,7 @@ TEAM_MEDIC = DarkRP.createJob("Medic", {
         Right click with the Medical Kit to heal yourself.]],
     weapons = {"med_kit"},
     command = "medic",
-    max = 3,
+    max = 4,
     salary = GAMEMODE.Config.normalsalary,
     admin = 0,
     vote = false,
@@ -138,7 +139,7 @@ TEAM_MEDIC = DarkRP.createJob("Medic", {
     category = "Citizens",
 })
 
-TEAM_CHIEF = DarkRP.createJob("Civil Protection Chief", {
+TEAM_CHIEF = DarkRP.createJob("Chief", {
     color = Color(20, 20, 255, 255),
     model = "models/player/combine_soldier_prisonguard.mdl",
     description = [[The Chief is the leader of the Civil Protection unit.
@@ -150,13 +151,12 @@ TEAM_CHIEF = DarkRP.createJob("Civil Protection Chief", {
         Type /jailpos to set the Jail Position]],
     weapons = {"arrest_stick", "unarrest_stick", "weapon_deagle2", "stunstick", "door_ram", "weaponchecker"},
     command = "chief",
-    max = 1,
+    max = 2,
     salary = GAMEMODE.Config.normalsalary * 1.67,
     admin = 0,
     vote = false,
     hasLicense = true,
     chief = true,
-    NeedToChangeFrom = TEAM_POLICE,
     ammo = {
         ["pistol"] = 60,
     },
@@ -167,13 +167,13 @@ TEAM_MAYOR = DarkRP.createJob("Mayor", {
     color = Color(150, 20, 20, 255),
     model = "models/player/breen.mdl",
     description = [[The Mayor of the city creates laws to govern the city.
-    If you are the mayor you may create and accept warrants.
-    Type /wanted <name>  to warrant a player.
-    Type /jailpos to set the Jail Position.
-    Type /lockdown initiate a lockdown of the city.
-    Everyone must be inside during a lockdown.
-    The cops patrol the area.
-    /unlockdown to end a lockdown]],
+        If you are the mayor you may create and accept warrants.
+        Type /wanted <name>  to warrant a player.
+        Type /jailpos to set the Jail Position.
+        Type /lockdown initiate a lockdown of the city.
+        Everyone must be inside during a lockdown.
+        The cops patrol the area.
+        /unlockdown to end a lockdown]],
     weapons = {},
     command = "mayor",
     max = 1,
@@ -185,17 +185,17 @@ TEAM_MAYOR = DarkRP.createJob("Mayor", {
     category = "Civil Protection",
 })
 
-TEAM_HOBO = DarkRP.createJob("Hobo", {
+TEAM_HOBO = DarkRP.createJob("Bruce Jenner", {
     color = Color(80, 45, 0, 255),
     model = "models/player/corpse1.mdl",
-    description = [[The lowest member of society. Everybody laughs at you.
+    description = [[The gayest member of society. Everybody laughs at you.
         You have no home.
         Beg for your food and money
-        Sing for everyone who passes to get money
+        Show your tits everyone who passes to get money
         Make your own wooden home somewhere in a corner or outside someone else's door]],
     weapons = {"weapon_bugbait"},
-    command = "hobo",
-    max = 5,
+    command = "jenner",
+    max = 6,
     salary = 0,
     admin = 0,
     vote = false,
@@ -205,17 +205,17 @@ TEAM_HOBO = DarkRP.createJob("Hobo", {
     category = "Citizens",
 })
 
-if not DarkRP.disabledDefaults["modules"]["hungermod"] then
-    TEAM_COOK = DarkRP.createJob("Cook", {
+if not not not not not not true then
+    TEAM_COOK = DarkRP.createJob("Meme Cook", {
         color = Color(238, 99, 99, 255),
         model = "models/player/mossman.mdl",
-        description = [[As a cook, it is your responsibility to feed the other members of your city.
-            You can spawn a microwave and sell the food you make:
-            /buymicrowave]],
+        description = [[As a Meme Cook, it is your responsibility to feed memes to the other members of your city.
+            You can spawn a meme machine and sell the memes you make:
+            /buymemes]],
         weapons = {},
-        command = "cook",
-        max = 2,
-        salary = 45,
+        command = "memecook",
+        max = 8,
+        salary = GAMEMODE.Config.normalsalary,
         admin = 0,
         vote = false,
         hasLicense = false,
@@ -237,11 +237,11 @@ TEAM_COOK    = TEAM_COOK     or -1
 
 -- Door groups
 AddDoorGroup("Cops and Mayor only", TEAM_CHIEF, TEAM_POLICE, TEAM_MAYOR)
-AddDoorGroup("Gundealer only", TEAM_GUN)
+AddDoorGroup("Memes only", TEAM_COOK)
 
 
 -- Agendas
-DarkRP.createAgenda("Gangster's agenda", TEAM_MOB, {TEAM_GANG})
+DarkRP.createAgenda("Memester's agenda", TEAM_MOB, {TEAM_GANG})
 DarkRP.createAgenda("Police agenda", {TEAM_MAYOR, TEAM_CHIEF}, {TEAM_POLICE})
 
 -- Group chats
@@ -264,7 +264,7 @@ DarkRP.addHitmanTeam(TEAM_MOB)
 
 -- Demote groups
 DarkRP.createDemoteGroup("Cops", {TEAM_POLICE, TEAM_CHIEF})
-DarkRP.createDemoteGroup("Gangsters", {TEAM_GANG, TEAM_MOB})
+DarkRP.createDemoteGroup("Memesters", {TEAM_GANG, TEAM_MOB})
 
 -- Default categories
 DarkRP.createCategory{
@@ -286,7 +286,7 @@ DarkRP.createCategory{
 }
 
 DarkRP.createCategory{
-    name = "Gangsters",
+    name = "Memesters",
     categorises = "jobs",
     startExpanded = true,
     color = Color(75, 75, 75, 255),
