@@ -8,7 +8,7 @@ function ENT:createItem()
 
     local wep = weapons.Get("med_kit")
     gun:SetModel(wep and wep.WorldModel or "models/weapons/w_pist_p228.mdl")
-    gun:SetWeaponClass(GAMEMODE.Config.gunlabweapon)
+    gun:SetWeaponClass("med_kit")
     local gunPos = self:GetPos()
     gun:SetPos(Vector(gunPos.x, gunPos.y, gunPos.z + 27))
     gun:Spawn()
