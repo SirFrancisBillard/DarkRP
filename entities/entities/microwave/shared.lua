@@ -1,9 +1,9 @@
 ENT.Base = "lab_base"
-ENT.PrintName = "Microwave"
+ENT.PrintName = "Meme Machine"
 
 function ENT:initVars()
     self.model = "models/props/cs_office/microwave.mdl"
-    self.initialPrice = GAMEMODE.Config.microwavefoodcost
-    self.labPhrase = DarkRP.getPhrase("microwave")
-    self.itemPhrase = string.lower(DarkRP.getPhrase("food"))
+    self.initialPrice = 420
+    self.labPhrase = "Meme Machine"
+    self.itemPhrase = "Memes"
 end
