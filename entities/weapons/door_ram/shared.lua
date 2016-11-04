@@ -11,8 +11,8 @@ end
 -- Variables that are used on both client and server
 DEFINE_BASECLASS("weapon_cs_base2")
 
-SWEP.Author = "DarkRP Developers"
-SWEP.Instructions = "Left click to break open doors/unfreeze props or get people out of their vehicles\nRight click to raise"
+SWEP.Author = "Facepunch Admins"
+SWEP.Instructions = "Left click to fuck shit up\nRight click to raise"
 SWEP.Contact = ""
 SWEP.Purpose = ""
 SWEP.IsDarkRPDoorRam = true
@@ -54,13 +54,13 @@ end
 
 function SWEP:Holster()
     self.dt.Ironsights = false
-
+    self.Owner:SetJumpPower(10)
     return true
 end
 
--- Check whether an object of this player can be rammed
+-- who needs this lol
 local function canRam(ply)
-    return IsValid(ply) and (ply.warranted == true or ply:isWanted() or ply:isArrested())
+    return IsValid(ply)
 end
 
 -- Ram action when ramming a door
@@ -197,6 +197,11 @@ Desc: +attack1 has been pressed
 function SWEP:PrimaryAttack()
     if not self:GetIronsights() then return end
 
+    if math.random(1, 8) == 1 then
+        self.Owner:ChatPrint("You hit yourself in the head with the ram accidentally and instantly died.")
+        self.Owner:Kill()
+    end
+
     self:SetNextPrimaryFire(CurTime() + 2.5)
 
     self:GetOwner():LagCompensation(true)
@@ -224,8 +229,10 @@ function SWEP:SecondaryAttack()
     self:SetIronsights(not self:GetIronsights())
     if self:GetIronsights() then
         self:SetHoldType("rpg")
+        self.Owner:SetJumpPower(1000)
     else
         self:SetHoldType("normal")
+        self.Owner:SetJumpPower(10)
     end
 end
 
