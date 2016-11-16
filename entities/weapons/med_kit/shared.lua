@@ -3,18 +3,18 @@ if SERVER then
 end
 
 SWEP.PrintName = "Medic Kit"
-SWEP.Author = "DarkRP Developers"
+SWEP.Author = "FacePunch ShitPosters"
 SWEP.Slot = 4
 SWEP.SlotPos = 0
-SWEP.Description = "Heals the wounded."
+SWEP.Description = "Kills EveryBody Instantly."
 SWEP.Contact = ""
 SWEP.Purpose = ""
-SWEP.Instructions = "Left click to heal someone\nRight click to heal yourself"
+SWEP.Instructions = "Left Click To Kill SomeOne\nRight Click To Heal YourSelf"
 SWEP.IsDarkRPMedKit = true
 
 SWEP.Spawnable = true
 SWEP.AdminOnly = true
-SWEP.Category = "DarkRP (Utility)"
+SWEP.Category = "ScriptFodderRP (Utility)"
 
 SWEP.ViewModel = "models/weapons/c_medkit.mdl"
 SWEP.WorldModel = "models/weapons/w_medkit.mdl"
@@ -43,7 +43,7 @@ function SWEP:PrimaryAttack()
     local aimVec = self:GetOwner():GetAimVector()
 
     for k,v in pairs(player.GetAll()) do
-        local maxhealth = v:GetMaxHealth() or 100
+        local maxhealth = 1337
         if v == self:GetOwner() or v:GetShootPos():DistToSqr(self:GetOwner():GetShootPos()) > 7225 or v:Health() >= maxhealth or not v:Alive() then continue end
 
         local direction = v:GetShootPos() - self:GetOwner():GetShootPos()
@@ -59,7 +59,8 @@ function SWEP:PrimaryAttack()
     self:GetOwner():LagCompensation(false)
 
     if found then
-        found:SetHealth(found:Health() + 1)
+        found:SetHealth(found:Health() + 69)
+        found:ChatPrint("ApRil Fools")
         self:EmitSound("hl1/fvox/boop.wav", 150, found:Health() / found:GetMaxHealth() * 100, 1, CHAN_AUTO)
     end
 end
@@ -69,7 +70,8 @@ function SWEP:SecondaryAttack()
     local ply = self:GetOwner()
     local maxhealth = self:GetOwner():GetMaxHealth() or 100
     if ply:Health() < maxhealth then
-        ply:SetHealth(ply:Health() + 1)
+        ply:SetHealth(ply:Health() + 69)
+        ply:ChatPrint("TeeHee ReKt")
         self:EmitSound("hl1/fvox/boop.wav", 150, ply:Health() / ply:GetMaxHealth() * 100, 1, CHAN_AUTO)
     end
 end
